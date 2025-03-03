@@ -29,11 +29,12 @@ document.getElementById('paintCalculatorForm').addEventListener('submit', functi
         exterior: 400
     };
 
-    const gallonsNeeded = totalArea / coveragePerGallon[paintType];
-    const roundedGallons = Math.ceil(gallonsNeeded);
+    const gallonsNeededOneCoat = totalArea / coveragePerGallon[paintType];
+    const gallonsNeededTwoCoats = gallonsNeededOneCoat * 1.6;
 
-    document.getElementById('result').textContent = `Total paint required: ${roundedGallons} gallon(s).`;
-    
+    document.getElementById('one-coat').textContent = `One Coat: ${gallonsNeededOneCoat.toFixed(2)} gallon(s)`;
+    document.getElementById('two-coat').textContent = `Two Coats: ${gallonsNeededTwoCoats.toFixed(2)} gallon(s)`;
+
     // Adjust iframe height dynamically
     function adjustParentIframe() {
         var body = document.body,
