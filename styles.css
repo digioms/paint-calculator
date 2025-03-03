@@ -79,11 +79,28 @@ button:hover {
     background-color: #0c5ac0;
 }
 
-#result {
+/* Updated result styling */
+.result-box {
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
     margin-top: 20px;
-    font-weight: bold;
-    color: #333;
     text-align: center;
+}
+
+.result-box p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#one-coat {
+    color: #0e6be6;
+    font-weight: bold;
+}
+
+#two-coat {
+    color: #d9534f;
+    font-weight: bold;
 }
 
 @media (max-width: 600px) {
