@@ -33,4 +33,21 @@ document.getElementById('paintCalculatorForm').addEventListener('submit', functi
     const roundedGallons = Math.ceil(gallonsNeeded);
 
     document.getElementById('result').textContent = `Total paint required: ${roundedGallons} gallon(s).`;
+    
+    // Adjust iframe height dynamically
+    function adjustParentIframe() {
+        var body = document.body,
+            html = document.documentElement;
+
+        var height = Math.max(
+            body.scrollHeight, body.offsetHeight,
+            html.clientHeight, html.scrollHeight, html.offsetHeight
+        );
+
+        parent.postMessage(height, "*");
+    }
+    
+    // Call function after the page loads & when resizing
+    window.onload = adjustParentIframe;
+    window.onresize = adjustParentIframe;
 });
