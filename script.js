@@ -20,13 +20,13 @@ document.getElementById('paintCalculatorForm').addEventListener('submit', functi
     const ceilingArea = includeCeiling ? length * width : 0;
     const totalArea = wallArea + ceilingArea;
 
-    // Coverage per gallon varies by paint type
+ // Coverage per gallon varies by paint type
     const coveragePerGallon = {
         standard: 350,
-        primer: 200,
+        primer: 250,
         paintPrimer: 250,
-        dark: 325,
-        exterior: 400
+        dark: 300,
+        exterior: 300
     };
 
     const gallonsNeededOneCoat = totalArea / coveragePerGallon[paintType];
